@@ -6,10 +6,12 @@ import posed from 'react-pose';
 const Menu = posed.div({
   open: {
     x: '0%',
+    opacity: 1,
     delayChildren: 200,
     staggerChildren: 80,
   },
   closed: { 
+    opacity: 0,
     x: '100%',
     delay: 200 
   }
@@ -17,6 +19,7 @@ const Menu = posed.div({
 
 const StyledMenu = styled(Menu)`
 
+  opacity: 0;
   position: fixed;
   display: flex;
   align-items: center;

@@ -10,7 +10,7 @@ import AboutSlider from '../components/AboutSlider';
 const StyledAboutSection = styled.section`
 
   position: relative;
-  padding: 240px 0;
+  padding: 60px 0;
   overflow-x: hidden;
 
 `
@@ -75,7 +75,8 @@ class AboutSection extends Component{
             <Row>
               <StyledAboutLeftCol md="6">
                 <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo officia, inventore incidunt quam voluptatum dolores eius unde natus doloribus qui, id minima magnam nihil libero harum beatae exercitationem sapiente ducimus.</p>
+                <p>Hi there, my name is James and I'm a front-end developer based in Vancouver. I have been in the industry for over 4 years of building custom-tailored digital experiences for companies with technologies like WordPress, React and Gatsby. I live and breathe HTML/CSS/Javascript, with having a fierce passion of bringing UI/UX concepts to life.
+                </p>
               </StyledAboutLeftCol>
             </Row>
           </AbsoluteContainer>

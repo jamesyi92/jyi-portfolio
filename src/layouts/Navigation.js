@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import { device } from '../utils/device';
 import posed from 'react-pose';
+import { Link } from "gatsby";
 
 const Menu = posed.div({
   open: {
@@ -60,57 +61,63 @@ const ListItem = posed.div({
 
 const StyledListItem = styled(ListItem)`
 
-  position: relative;
   color: #ffffff;
   font-weight: bold;
   font-size: 40px;
   margin-bottom: 30px;
-  padding-left: 60px;
   overflow: hidden;
+  cursor: pointer;
 
+  a {
 
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #ffffff;
-    bottom: 0;
-    transform: translateY(-50%) translateX(-100%);
-    opacity: 0;
-    transition: all .4s cubic-bezier(0.7,0,0.3,1);
-  }
-
-  // &::before {
-    
-  //   content: attr(data-navtext);
-  //   position: absolute;
-  //   z-index: 2;
-  //   overflow: hidden;
-  //   color: ${props => props.theme.primary};
-  //   width: 0%;
-  //   transition: width .4s .3s;
-  //   white-space: nowrap;
-
-  // }
-
-  &:hover {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
 
     &::after {
-
-      opacity: 1;
-      transform: translateY(-50%) translateX(105%);
-
-    }
-
-    &::before {
-
+      content: '';
+      position: absolute;
+      left: 0;
       width: 100%;
+      height: 4px;
+      background: #ffffff;
+      bottom: -15px;
+      transform: translateY(-50%) translateX(-100%);
+      opacity: 0;
+      transition: all .2s cubic-bezier(0.7,0,0.3,1);
+    }
+
+    // &::before {
+      
+    //   content: attr(data-navtext);
+    //   position: absolute;
+    //   z-index: 2;
+    //   overflow: hidden;
+    //   color: ${props => props.theme.primary};
+    //   width: 0%;
+    //   transition: width .4s .3s;
+    //   white-space: nowrap;
+
+    // }
+
+    &:hover {
+
+      &::after {
+
+        opacity: 1;
+        transform: translateY(-50%) translateX(0%);
+
+      }
+
+      &::before {
+
+        width: 100%;
+
+      }
 
     }
 
-  }
+   }
 
   @media ${device.laptop} {
 
@@ -126,11 +133,11 @@ const Navigation = ({ isMenuOpen }) => {
 	return(
 		<StyledMenu pose={ isMenuOpen ? 'open' : 'closed' }>
       <StyledMenuList>
-        <StyledListItem data-navtext="About Me">About Me</StyledListItem>
-        <StyledListItem>Work</StyledListItem>
-        <StyledListItem>Skills</StyledListItem>
-        <StyledListItem>Experience</StyledListItem>
-        <StyledListItem>Resume</StyledListItem>
+        <StyledListItem><Link to="/">Home</Link></StyledListItem>
+        <StyledListItem><Link to="/">About Me</Link></StyledListItem>
+        <StyledListItem><Link to="/">Work</Link></StyledListItem>
+        <StyledListItem><Link to="/">Skills</Link></StyledListItem>
+        <StyledListItem><Link to="/resume">Resume</Link></StyledListItem>
       </StyledMenuList>
     </StyledMenu>
 	)

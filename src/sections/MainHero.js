@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import { device } from '../utils/device';
 
 import Device from "../images/svg/device.svg";
+import DeviceLaptop from "../images/svg/device-laptop.svg";
+
+import { useSpring, config, animated } from 'react-spring';
 
 
 const StyledHeroSection = styled.section`
@@ -50,10 +53,13 @@ const StyledHeroRow1Col = styled(Col)`
 const StyledHeroTitleWrap = styled.div`
 
   position: relative;
+  
+`
 
-  svg {
+const StyledDevicePhone = styled(Device)`
 
-    display: none;
+  
+  display: none;
 
     @media ${device.laptop} {
       display: block;
@@ -65,63 +71,65 @@ const StyledHeroTitleWrap = styled.div`
       transform: translateY(-50%);
     }
 
-  }
+
+`
+
+const StyledDeviceLaptop = styled(DeviceLaptop)`
+
   
+  display: none;
+
+    @media ${device.laptop} {
+      display: block;
+      position: absolute;
+      width: 700px;
+      height: auto;
+      z-index: 0;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+
 `
 
-const StyledHeroRow2 = styled(Row)`
+const MainHero = () => {
 
-  @media ${device.laptop} {
-    justify-content: flex-end;
-    position: relative;
-    top: 200px;
-  }
-
-`
-
-const StyledHeroIntroText = styled.span`
-
-  font-size: 18px;
-  
-`
-
-class MainHero extends Component{
-
-  render() {
+  const props = useSpring({
+    opacity: 1,
+    transform: 'translate3d(0, 0, 0)',
+    config: config.slow,
+    delay: 400,
+    from: { 
+      opacity: 0,
+      transform: 'translate3d(0, 30px, 0)'
+    },
+  })
 
     return(
       <React.Fragment>
 
         <StyledHeroSection>
+          <StyledDeviceLaptop />
           <StyledHeroWrap>
             <Container>
               <Row>
                 <StyledHeroRow1Col md="8">
                   <StyledHeroTitleWrap>
-                    <Device />
-                    <h1>
+                    <animated.h1 style={props}>
                       <span>James Yi</span>
                       <span>Front-End</span>
                       <span>Developer</span>
-                    </h1>
+                    </animated.h1>
                   </StyledHeroTitleWrap>
                 </StyledHeroRow1Col>
               </Row>
-              <StyledHeroRow2>
-                <Col md="4">
-                  <StyledHeroIntroText>
-                    I make UI/UX designs come to life on the web.
-                    Coding and design is my passion.
-                  </StyledHeroIntroText>
-                </Col>
-              </StyledHeroRow2>
             </Container>
           </StyledHeroWrap>
         </StyledHeroSection>
 
       </React.Fragment>
     )
-  }
 }
 
 export default MainHero;

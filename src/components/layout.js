@@ -5,6 +5,8 @@ import { StaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 import theme from '../utils/theme';
 
+import { ParallaxProvider } from 'react-scroll-parallax';
+
 import '../scss/main.scss';
 
 import Header from '../layouts/Header';
@@ -22,10 +24,12 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <ThemeProvider theme={ theme }>
-        <React.Fragment>
-          <Header />
-          <main>{children}</main>
-        </React.Fragment>
+        <ParallaxProvider>
+          <React.Fragment>
+            <Header />
+            <main>{children}</main>
+          </React.Fragment>
+        </ParallaxProvider>
       </ThemeProvider>
     )}
   />

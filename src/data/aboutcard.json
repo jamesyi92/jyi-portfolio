@@ -1,17 +1,17 @@
 [
 	{
 		"icon": "JS",
-		"title": "Some Title",
-		"content": "Fusce lobortis, urna et eleifend lacinia, nibh turpis varius tortor, id aliquam urna massa ut mi. Donec dignissim libero sed enim ultrices laoreet. Nunc at cursus metus. Mauris at sodales dolor."
+		"title": "Javascript",
+		"content": "Familiar with ES5 and ES6, I have experience in implementing front-end logic for web applications and websites."
 	},
 	{
 		"icon": "CSS",
-		"title": "Some Title",
-		"content": "Fusce lobortis, urna et eleifend lacinia, nibh turpis varius tortor, id aliquam urna massa ut mi. Donec dignissim libero sed enim ultrices laoreet. Nunc at cursus metus. Mauris at sodales dolor."
+		"title": "CSS",
+		"content": "SASS, CSS Grid, Flexbox, CSS Animations, Mixins, Responsive Design"
 	},
 	{
 		"icon": "HTML",
-		"title": "Some Title",
+		"title": "HTML",
 		"content": "Fusce lobortis, urna et eleifend lacinia, nibh turpis varius tortor, id aliquam urna massa ut mi. Donec dignissim libero sed enim ultrices laoreet. Nunc at cursus metus. Mauris at sodales dolor."
 	}
 ]

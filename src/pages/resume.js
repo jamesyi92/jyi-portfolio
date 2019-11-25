@@ -176,7 +176,7 @@ const ResumePage = () => (
     						<ExperienceIntro>Developed, maintained and managed websites and scalable digital solutions based on business requirements for multiple verticals.</ExperienceIntro>
 						    <ExperienceList>
 						    	<li>Developed multiple in-house WordPress themes that involved custom templates and functions based off Sage 9. </li>
-							    <li>Developed views/templates using Laravel's Blade engine, ensuring a DRY theme with a reusable component-based architecture, while separating logic inside controllers.</li>
+							    <li>Developed views/templates using Laravel's Blade engine, ensuring a DRY theme with a reusable component-based architecture, while creating controllers to separate logic from the view layer.</li>
 							    <li>Created and implemented a mobile-first responsive design system that included typography, grid, color, spacing, and buttons using SASS based off brand guidelines.</li>
 							    <li>Used modern ES6+ Javascript features for data manipulation, DOM traversal and writing asynchronous Javascript involved in sending or consuming REST API data. (Axios, Fetch API)</li>
 							    <li>Utilized Webpack for hot reloading, bundling SASS, ES6+ JS and other assets using ESLint and Babel loaders.</li>

@@ -145,7 +145,7 @@ const Education = styled.div`
 
 const ResumePage = () => (
   <Layout>
-  	<SEO title="James Yi" description="Front-End Developer Based in Vancouver" />
+  	<SEO title="Resume" description="Front-End Developer Based in Vancouver" />
     <Section>
     	<Container>
     		<Row className="justify-content-center">

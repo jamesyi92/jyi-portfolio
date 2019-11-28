@@ -1,11 +1,6 @@
 import PropTypes from "prop-types"
 import React, { Component } from "react"
 import styled from 'styled-components'
-
-import { device } from '../utils/device';
-
-import posed from 'react-pose';
-
 import Navigation from './Navigation';
 
 const StyledHeader = styled.header`

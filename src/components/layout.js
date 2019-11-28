@@ -14,7 +14,7 @@ const Layout = ({ children }) => (
   <ThemeProvider theme={ theme }>
     <ParallaxProvider>
       <React.Fragment>
-        {/* <Header /> */}
+        <Header />
         <main>{children}</main>
       </React.Fragment>
     </ParallaxProvider>

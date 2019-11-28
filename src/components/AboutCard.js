@@ -71,6 +71,8 @@ const AboutCard = ( { title, content, icon } ) => {
             		return <CSS />
             	case 'JS':
             		return <JS />
+              default:
+                return <p>Nothing Found</p>
             }
         })()}
 

@@ -1,12 +1,13 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import styled from 'styled-components';
 import { device } from '../utils/device';
 
-import Device from "../images/svg/device.svg";
 import DeviceLaptop from "../images/svg/device-laptop.svg";
+import Web from '../images/svg/web.svg'
 
 import { useSpring, config, animated } from 'react-spring';
+import SvgLines from 'react-mt-svg-lines'; 
 
 
 const StyledHeroSection = styled.section`
@@ -14,7 +15,7 @@ const StyledHeroSection = styled.section`
   display: flex;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to right, #ffffff, #ffffff 50%, ${props => props.theme.primaryLight} 50%);
+  //background: linear-gradient(to right, #ffffff, #ffffff 50%, ${props => props.theme.primaryLight} 50%);
 
 `;
 
@@ -56,24 +57,6 @@ const StyledHeroTitleWrap = styled.div`
   
 `
 
-const StyledDevicePhone = styled(Device)`
-
-  
-  display: none;
-
-    @media ${device.laptop} {
-      display: block;
-      position: absolute;
-      width: 300px;
-      height: auto;
-      z-index: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-
-`
-
 const StyledDeviceLaptop = styled(DeviceLaptop)`
 
   
@@ -99,7 +82,7 @@ const MainHero = () => {
     opacity: 1,
     transform: 'translate3d(0, 0, 0)',
     config: config.slow,
-    delay: 400,
+    delay: 800,
     from: { 
       opacity: 0,
       transform: 'translate3d(0, 30px, 0)'
@@ -110,7 +93,9 @@ const MainHero = () => {
       <React.Fragment>
 
         <StyledHeroSection>
-          <StyledDeviceLaptop />
+          <SvgLines animate={ true } duration={ 500 }>
+            <StyledDeviceLaptop />
+          </SvgLines>
           <StyledHeroWrap>
             <Container>
               <Row>

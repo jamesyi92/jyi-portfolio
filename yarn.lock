@@ -1203,6 +1203,11 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
+"@tweenjs/tween.js@16.7.0":
+  version "16.7.0"
+  resolved "https://registry.yarnpkg.com/@tweenjs/tween.js/-/tween.js-16.7.0.tgz#3ada9785f5bb2d92bb6313515f88102c2e47ddab"
+  integrity sha1-OtqXhfW7LZK7YxNRX4gQLC5H3as=
+
 "@types/configstore@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@types/configstore/-/configstore-2.1.1.tgz#cd1e8553633ad3185c3f2f239ecff5d2643e92b6"
@@ -10249,6 +10254,13 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-mt-svg-lines@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/react-mt-svg-lines/-/react-mt-svg-lines-0.9.1.tgz#74ed042b3482ef21061a9edb2f1f7e17f0b65e57"
+  integrity sha512-ts+wY5RZVDOpD+MGzPnWcnQ+Luktn12GenS2EU8PIm7uCb+tWTVdpxsQaZVYI/kLdxyY97cK9QwJH9RsdHdaww==
+  dependencies:
+    "@tweenjs/tween.js" "16.7.0"
 
 react-popper@^1.3.3:
   version "1.3.6"

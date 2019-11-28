@@ -1,8 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'reactstrap';
-
-import posed from 'react-pose';
 
 const StyledWorkCard = styled.div`
 

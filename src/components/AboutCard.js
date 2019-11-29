@@ -7,30 +7,24 @@ import CSS from "../images/svg/css.svg";
 import JS from "../images/svg/js.svg";
 
 const StyledAboutCard = styled.div`
-
 	position: relative;
-  background: #444;;
+  background: ${props => {
+    if(props.icon === 'JS') {
+      return '#FCB900'
+    } else if(props.icon === 'CSS') {
+      return '#F78DA7';
+    } else {
+      return '#8ED1FC';
+    }
+  }};
+  border-radius: 6px;
   height: 500px;
   padding: 60px 30px;
   margin-right: 30px;
  	cursor: pointer;
-
-  @media ${device.laptopL} {
-
-    height: 550px;
-
-  }
-
-  @media ${device.desktop} {
-
-    height: 640px;
-
-  }
-
 `
 
 const StyledAboutCardTop = styled.div`
-
   svg {
   	position: absolute;
   	bottom: 0;
@@ -39,11 +33,9 @@ const StyledAboutCardTop = styled.div`
   	height: auto;
   	fill: #ffffff;
   }
-
 `
 
 const StyledAboutCardBottom = styled.div`
-
   h3 {
     font-size: 22px;
     margin-bottom: 15px;
@@ -53,14 +45,13 @@ const StyledAboutCardBottom = styled.div`
   p {
     color: #ffffff;
   }
-
 `
 
 const AboutCard = ( { title, content, icon } ) => {
 	return(
 
 		<div>
-      <StyledAboutCard>
+      <StyledAboutCard icon={icon}>
        <StyledAboutCardTop>
 
        	{(() => {

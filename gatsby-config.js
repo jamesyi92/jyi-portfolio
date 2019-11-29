@@ -7,8 +7,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-styled-components`,
     `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: false
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

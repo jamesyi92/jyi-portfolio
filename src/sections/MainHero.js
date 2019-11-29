@@ -9,6 +9,9 @@ import Web from '../images/svg/web.svg'
 import { useSpring, config, animated } from 'react-spring';
 import SvgLines from 'react-mt-svg-lines'; 
 
+import Particles from 'react-particles-js';
+import particlesConfig from '../utils/particlesConfig';
+
 
 const StyledHeroSection = styled.section`
 
@@ -58,8 +61,6 @@ const StyledHeroTitleWrap = styled.div`
 `
 
 const StyledDeviceLaptop = styled(DeviceLaptop)`
-
-  
   display: none;
 
     @media ${device.laptop} {
@@ -72,8 +73,15 @@ const StyledDeviceLaptop = styled(DeviceLaptop)`
       top: 50%;
       transform: translateY(-50%);
     }
+`
 
-
+const StyledParticles = styled(Particles)`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
 `
 
 const MainHero = () => {
@@ -90,30 +98,29 @@ const MainHero = () => {
   })
 
     return(
-      <React.Fragment>
-
-        <StyledHeroSection>
-          <SvgLines animate={ true } duration={ 500 }>
-            <StyledDeviceLaptop />
-          </SvgLines>
-          <StyledHeroWrap>
-            <Container>
-              <Row>
-                <StyledHeroRow1Col md="8">
-                  <StyledHeroTitleWrap>
-                    <animated.h1 style={props}>
-                      <span>James Yi</span>
-                      <span>Front-End</span>
-                      <span>Developer</span>
-                    </animated.h1>
-                  </StyledHeroTitleWrap>
-                </StyledHeroRow1Col>
-              </Row>
-            </Container>
-          </StyledHeroWrap>
-        </StyledHeroSection>
-
-      </React.Fragment>
+      <StyledHeroSection>
+        <StyledParticles
+          params={ particlesConfig }
+        />
+        <SvgLines animate={ true } duration={ 500 }>
+          <StyledDeviceLaptop />
+        </SvgLines>
+        <StyledHeroWrap>
+          <Container>
+            <Row>
+              <StyledHeroRow1Col md="8">
+                <StyledHeroTitleWrap>
+                  <animated.h1 style={props}>
+                    <span>James Yi</span>
+                    <span>Front-End</span>
+                    <span>Developer</span>
+                  </animated.h1>
+                </StyledHeroTitleWrap>
+              </StyledHeroRow1Col>
+            </Row>
+          </Container>
+        </StyledHeroWrap>
+      </StyledHeroSection>
     )
 }
 

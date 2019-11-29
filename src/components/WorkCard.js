@@ -6,7 +6,7 @@ const StyledWorkCard = styled.div`
   display: flex;
   align-items: flex-end;
   position: relative;
-  min-height: 360px;
+  height: 360px;
   padding: 30px 30px 60px;
   margin-bottom: 30px;
   overflow: hidden;

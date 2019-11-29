@@ -26,6 +26,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-mt-svg-lines": "^0.9.1",
+    "react-particles-js": "^2.7.0",
     "react-pose": "^4.0.8",
     "react-scroll-parallax": "^2.2.0",
     "react-slick": "^0.24.0",

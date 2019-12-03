@@ -18,7 +18,7 @@ const StyledHeroSection = styled.section`
   display: flex;
   align-items: center;
   height: 100vh;
-  //background: linear-gradient(to right, #ffffff, #ffffff 50%, ${props => props.theme.primaryLight} 50%);
+  background: linear-gradient(to right, #ffffff, #ffffff 50%, ${props => props.theme.primaryLight} 50%);
 
 `;
 
@@ -81,7 +81,7 @@ const StyledParticles = styled(Particles)`
   height: 100%;
   left: 0;
   top: 0;
-  z-index: -1;
+  z-index: 1;
 `
 
 const MainHero = () => {

@@ -81,24 +81,11 @@ const StyledListItem = styled(ListItem)`
       width: 100%;
       height: 4px;
       background: #ffffff;
-      bottom: -15px;
+      bottom: -10px;
       transform: translateY(-50%) translateX(-100%);
       opacity: 0;
       transition: all .2s cubic-bezier(0.7,0,0.3,1);
     }
-
-    // &::before {
-      
-    //   content: attr(data-navtext);
-    //   position: absolute;
-    //   z-index: 2;
-    //   overflow: hidden;
-    //   color: ${props => props.theme.primary};
-    //   width: 0%;
-    //   transition: width .4s .3s;
-    //   white-space: nowrap;
-
-    // }
 
     &:hover {
 
@@ -106,12 +93,6 @@ const StyledListItem = styled(ListItem)`
 
         opacity: 1;
         transform: translateY(-50%) translateX(0%);
-
-      }
-
-      &::before {
-
-        width: 100%;
 
       }
 

@@ -10,7 +10,7 @@ import AboutSlider from '../components/AboutSlider';
 const StyledAboutSection = styled.section`
 
   position: relative;
-  padding: 60px 0;
+  padding: 90px 0;
   overflow-x: hidden;
 
 `

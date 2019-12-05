@@ -20,16 +20,17 @@ const typography = new Typography({
   bodyFontFamily: ['Lato', 'sans-serif'],
   overrideStyles: ({ rhythm }, options, styles) => ({
     h2: {
-      fontSize: '60px',
+      fontSize: '36px',
+      lineHeight: '1.1',
       marginBottom: '30px'
     },
     h3: {
-      fontSize: '40px',
+      fontSize: '28px',
       marginBottom: '30px',
       lineHeight: '1.1'
     },
     h4: {
-      fontSize: '18px'
+      fontSize: '24px'
     }
   }),
 })

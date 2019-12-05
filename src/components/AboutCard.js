@@ -8,17 +8,9 @@ import JS from "../images/svg/js.svg";
 
 const StyledAboutCard = styled.div`
 	position: relative;
-  background: ${props => {
-    if(props.icon === 'JS') {
-      return '#FCB900'
-    } else if(props.icon === 'CSS') {
-      return '#F78DA7';
-    } else {
-      return '#8ED1FC';
-    }
-  }};
+  background: #444444;
   border-radius: 6px;
-  height: 500px;
+  height: 550px;
   padding: 60px 30px;
   margin-right: 30px;
  	cursor: pointer;

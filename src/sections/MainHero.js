@@ -9,8 +9,7 @@ import Web from '../images/svg/web.svg'
 import { useSpring, config, animated } from 'react-spring';
 import SvgLines from 'react-mt-svg-lines'; 
 
-import Particles from 'react-particles-js';
-import particlesConfig from '../utils/particlesConfig';
+import { IoIosArrowDropdown } from "react-icons/io";
 
 
 const StyledHeroSection = styled.section`
@@ -75,18 +74,9 @@ const StyledDeviceLaptop = styled(DeviceLaptop)`
     }
 `
 
-const StyledParticles = styled(Particles)`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 1;
-`
-
 const MainHero = () => {
 
-  const props = useSpring({
+  const titleProps = useSpring({
     opacity: 1,
     transform: 'translate3d(0, 0, 0)',
     config: config.slow,
@@ -97,20 +87,56 @@ const MainHero = () => {
     },
   })
 
+  const svgProps = useSpring({
+    opacity: 1,
+    transform: 'translate3d(0, 0, 0)',
+    config: config.molasses,
+    delay: 200,
+    from: { 
+      opacity: 0,
+      transform: 'translate3d(-30px, 0, 0)'
+    },
+  })
+
+  const DownArrow = styled.div`
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+
+
+    svg {
+      fill: ${props => props.theme.primary};
+      width: 32px;
+      height: auto;
+    }
+  `
+
+
+
+
     return(
       <StyledHeroSection>
-        <StyledParticles
-          params={ particlesConfig }
-        />
+        <animated.div style={svgProps}>
         <SvgLines animate={ true } duration={ 500 }>
           <StyledDeviceLaptop />
         </SvgLines>
+        </animated.div>
+        <DownArrow>
+          <IoIosArrowDropdown />
+        </DownArrow>
         <StyledHeroWrap>
           <Container>
             <Row>
               <StyledHeroRow1Col md="8">
                 <StyledHeroTitleWrap>
-                  <animated.h1 style={props}>
+                  <animated.h1 style={titleProps}>
                     <span>James Yi</span>
                     <span>Front-End</span>
                     <span>Developer</span>

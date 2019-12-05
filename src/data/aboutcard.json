@@ -2,16 +2,16 @@
 	{
 		"icon": "JS",
 		"title": "Javascript",
-		"content": "Familiar with ES5 and ES6, I have experience in implementing front-end logic for web applications and websites."
+		"content": "ES5/ES6+, AJAX, Yarn, npm, React, Redux, Styled Components, GatsbyJS, Webpack, jQuery"
 	},
 	{
 		"icon": "CSS",
 		"title": "CSS",
-		"content": "SASS, CSS Grid, Flexbox, CSS Animations, Mixins, Responsive Design"
+		"content": "SASS, CSS Grid, Flex Box, Media Queries, Bootstrap, Foundation, Bulma, Materialize CSS, BEM"
 	},
 	{
 		"icon": "HTML",
 		"title": "HTML",
-		"content": "Fusce lobortis, urna et eleifend lacinia, nibh turpis varius tortor, id aliquam urna massa ut mi. Donec dignissim libero sed enim ultrices laoreet. Nunc at cursus metus. Mauris at sodales dolor."
+		"content": "Semantic HTML, SEO, Accessibility"
 	}
 ]

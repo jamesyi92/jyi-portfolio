@@ -17,24 +17,27 @@ const StyledAboutCard = styled.div`
 `
 
 const StyledAboutCardTop = styled.div`
+
+	position: absolute;
+	bottom: 0;
+	right: 0;
+
   svg {
-  	position: absolute;
-  	bottom: 0;
-  	right: 0;
-  	width: 200px;
-  	height: auto;
-  	fill: #ffffff;
+    height: auto;
+    width: 200px;
+    fill: #ffffff;
   }
 `
 
 const StyledAboutCardBottom = styled.div`
   h3 {
-    font-size: 22px;
+    font-size: 32px;
     margin-bottom: 15px;
     color: #ffffff;
   }
 
   p {
+    font-size: 22px;
     color: #ffffff;
   }
 `

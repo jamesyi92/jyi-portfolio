@@ -10,6 +10,8 @@ const StyledWorkCard = styled.div`
   padding: 30px 30px 60px;
   margin-bottom: 30px;
   overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.14);
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -24,7 +26,7 @@ const StyledWorkCard = styled.div`
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: .7;
+    opacity: .4;
     z-index: 0;
   }
 

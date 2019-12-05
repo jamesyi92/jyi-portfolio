@@ -32,17 +32,11 @@ const StyledHeroWrap = styled.div`
 const StyledHeroRow1Col = styled(Col)`
 
   h1 {
-
-    @media ${device.laptop} {
-
-      position: relative;
-      font-size: 90px;
-      text-transform: uppercase;
-      text-align: right;
-      z-index: 1;
-
-    }
-
+    position: relative;
+    font-size: 90px;
+    text-transform: uppercase;
+    text-align: right;
+    z-index: 1;
   }
 
   h1 span {
@@ -60,18 +54,14 @@ const StyledHeroTitleWrap = styled.div`
 `
 
 const StyledDeviceLaptop = styled(DeviceLaptop)`
-  display: none;
-
-    @media ${device.laptop} {
-      display: block;
-      position: absolute;
-      width: 700px;
-      height: auto;
-      z-index: 0;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+  display: block;
+  position: absolute;
+  width: 40%;
+  height: auto;
+  z-index: 1;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 `
 
 const MainHero = () => {

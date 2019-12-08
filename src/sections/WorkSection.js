@@ -8,8 +8,6 @@ import { device } from '../utils/device';
 import WorkCardData from '../data/workCardData';
 import WorkCard from '../components/WorkCard';
 
-import Wave from '../images/svg/wave.svg';
-
 
 
 const StyledWorkSection = styled.section`
@@ -103,27 +101,6 @@ const Filter = styled.li`
   }
 `
 
-const animateWave = keyframes`
-  0% {
-    transform: scale(1, .4);
-  }
-  100% {
-    transform: scale(1,1);
-  }
-`
-
-const StyledWaveWrap = styled.div`
-  position: absolute;
-  width: 100%;
-  transform: translateY(-93%);
-  top: 0;
-  svg {
-    transform-origin: bottom;
-    animation: ${animateWave} 10s ease-in-out -10s infinite alternate forwards;
-  }
-
-`
-
 const PosedWorkCard = posed.div({
   enter: { y: 0, opacity: 1, },
   exit: { y: 50, opacity: 0, }
@@ -167,10 +144,6 @@ class WorkSection extends Component{
     return(
 
         <StyledWorkSection>
-
-          <StyledWaveWrap>
-            <Wave />
-          </StyledWaveWrap>
 
           <Container>
 

@@ -2,13 +2,15 @@ import React from 'react';
 import { graphql, useStaticQuery  } from 'gatsby';
 import Img from 'gatsby-image';
 import { Container, Row, Col } from 'reactstrap';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { device } from '../utils/device';
 
 import Particles from 'react-particles-js';
 import particlesConfig from '../utils/particlesConfig';
 
 import AboutSlider from '../components/AboutSlider';
+
+import Wave from '../images/svg/wave.svg';
 
 
 
@@ -74,6 +76,27 @@ const ProfilePic = styled(Img)`
   margin: 0 auto 30px;
 `
 
+const animateWave = keyframes`
+  0% {
+    transform: scale(1, .4);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+`
+
+const StyledWaveWrap = styled.div`
+  position: absolute;
+  width: 100%;
+  bottom: -8px;
+  z-index: 2;
+  svg {
+    transform-origin: bottom;
+    animation: ${animateWave} 8s ease-in-out -8s infinite alternate forwards;
+  }
+
+`
+
 
 
 const AboutSection = () => {
@@ -93,6 +116,9 @@ const AboutSection = () => {
 
   return(
     <StyledAboutSection>
+      <StyledWaveWrap>
+        <Wave />
+      </StyledWaveWrap>
     <StyledParticles
           params={ particlesConfig }
         />

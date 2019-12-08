@@ -64,6 +64,26 @@ const StyledDeviceLaptop = styled(DeviceLaptop)`
   transform: translateY(-50%);
 `
 
+const DownArrow = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+
+
+  svg {
+    fill: ${props => props.theme.primary};
+    width: 32px;
+    height: auto;
+  }
+`
+
 const MainHero = () => {
 
   const titleProps = useSpring({
@@ -77,47 +97,11 @@ const MainHero = () => {
     },
   })
 
-  const svgProps = useSpring({
-    opacity: 1,
-    transform: 'translate3d(0, 0, 0)',
-    config: config.molasses,
-    delay: 200,
-    from: { 
-      opacity: 0,
-      transform: 'translate3d(-30px, 0, 0)'
-    },
-  })
-
-  const DownArrow = styled.div`
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 50px;
-    z-index: 1;
-
-
-    svg {
-      fill: ${props => props.theme.primary};
-      width: 32px;
-      height: auto;
-    }
-  `
-
-
-
-
     return(
       <StyledHeroSection>
-        <animated.div style={svgProps}>
         <SvgLines animate={ true } duration={ 500 }>
           <StyledDeviceLaptop />
         </SvgLines>
-        </animated.div>
         <DownArrow>
           <IoIosArrowDropdown />
         </DownArrow>

@@ -18,7 +18,7 @@ const StyledAboutSection = styled.section`
 
   position: relative;
   padding: 90px 0 180px;
-  background-image: linear-gradient(0deg,rgba(0,7,88,.8),rgba(8,0,103,1));
+  background: ${props => props.theme.background};
 
 `
 
@@ -31,42 +31,12 @@ const StyledParticles = styled(Particles)`
   z-index: 0;
 `
 
-const StyledAboutRow = styled(Row)`
-
-  justify-content: flex-end;
-  align-items: center;
-
-`
-// const AbsoluteContainer = styled(Container)`
-
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-
-// `
-
-const StyledAboutLeftCol = styled(Col)`
+const StyledCol = styled(Col)`
 
   text-align: center;
-  color: #ffffff;
+  color: ${props => props.theme.textColor};
 
 `
-
-// const StyledAboutRightCol = styled(Col)`
-
-//   && {
-
-//     @media ${device.laptop} {
-
-//       padding-right: 0;
-//       padding-left: 0;
-
-//     }
-
-//   }
-
-// `
 
 const ProfilePic = styled(Img)`
   max-width: 100%;
@@ -124,12 +94,12 @@ const AboutSection = () => {
         />
         <Container>
           <Row className="justify-content-center">
-            <StyledAboutLeftCol md="6">
+            <StyledCol md="6">
               <ProfilePic fluid={data.aboutImage.childImageSharp.fluid} />
               <h2>Hi, I'm James!</h2>
               <p>I'm a front-end developer based in Vancouver. I have been in the industry for over 4 years of building custom-tailored digital experiences for companies with technologies like WordPress, React and Gatsby. I live and breathe HTML/CSS/Javascript, with having a fierce passion of bringing UI/UX concepts to life.
               </p>
-            </StyledAboutLeftCol>
+            </StyledCol>
           </Row>
         </Container>
 

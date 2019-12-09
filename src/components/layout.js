@@ -1,25 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
 import { ThemeProvider } from 'styled-components';
-import theme from '../utils/theme';
-
-import { ParallaxProvider } from 'react-scroll-parallax';
+import lightTheme from '../utils/themes/lightTheme';
+import darkTheme from '../utils/themes/darkTheme';
+import Header from '../components/Header';
+import ThemeSwitcher from './ThemeSwitcher';
 
 import '../scss/main.scss';
 
-import Header from '../layouts/Header';
+const Layout = ({ children }) => {
 
-const Layout = ({ children }) => (
-  <ThemeProvider theme={ theme }>
-    <ParallaxProvider>
-      <React.Fragment>
-        <Header />
-        <main>{children}</main>
-      </React.Fragment>
-    </ParallaxProvider>
-  </ThemeProvider>
-)
+	const stored = localStorage.getItem('isDarkMode');
+	const [isDarkMode, setIsDarkMode] = useState(stored === 'true' ? true : false)
+
+	return (
+	  <ThemeProvider theme={ isDarkMode ? darkTheme : lightTheme }>
+	    <React.Fragment>
+	      <Header />
+	      <ThemeSwitcher 
+	      	onClick={() => {
+		      	setIsDarkMode(!isDarkMode);
+		      	localStorage.setItem('isDarkMode', !isDarkMode);
+		      }}
+	      >
+	      	Toggle Theme
+	      </ThemeSwitcher>
+	      <main>
+	      	{children}
+	      </main>
+	    </React.Fragment>
+	  </ThemeProvider>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

@@ -9,23 +9,11 @@ import ThemeSwitcher from "./ThemeSwitcher"
 import "../scss/main.scss"
 
 const Layout = ({ children }) => {
-  useEffect(() => {
-    const stored = window.localStorage.getItem("isDarkMode")
-  })
-  const [isDarkMode, setIsDarkMode] = useState(stored === "true" ? true : false)
 
   return (
-    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+    <ThemeProvider>
       <React.Fragment>
         <Header />
-        <ThemeSwitcher
-          onClick={() => {
-            setIsDarkMode(!isDarkMode)
-            window.localStorage.setItem("isDarkMode", !isDarkMode)
-          }}
-        >
-          Toggle Theme
-        </ThemeSwitcher>
         <main>{children}</main>
       </React.Fragment>
     </ThemeProvider>

@@ -10,7 +10,7 @@ import '../scss/main.scss';
 
 const Layout = ({ children }) => {
 
-	const stored = localStorage.getItem('isDarkMode');
+	const stored = window.localStorage.getItem('isDarkMode');
 	const [isDarkMode, setIsDarkMode] = useState(stored === 'true' ? true : false)
 
 	return (
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
 	      <ThemeSwitcher 
 	      	onClick={() => {
 		      	setIsDarkMode(!isDarkMode);
-		      	localStorage.setItem('isDarkMode', !isDarkMode);
+		      	window.localStorage.setItem('isDarkMode', !isDarkMode);
 		      }}
 	      >
 	      	Toggle Theme
